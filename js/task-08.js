@@ -3,7 +3,7 @@ const inputsEl = formEl.elements;
 
 let loginForm = {}
 
-formEl.addEventListener('submit', (e) => {
+function correctForm () {
     e.preventDefault();
     if (inputsEl['email'].value === '' || inputsEl['password'].value === '') {
       alert('Всі поля повинні бути заповнені!!!');
@@ -14,4 +14,6 @@ formEl.addEventListener('submit', (e) => {
         formEl.reset();
     } 
     return false;  
-});
+}
+
+formEl.addEventListener('submit', correctForm);

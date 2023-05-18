@@ -8,8 +8,10 @@ let bodyEl = document.querySelector('body');
 let changeColorEl = document.querySelector('.change-color');
 let nameColor = document.querySelector('.color');
 
-changeColorEl.addEventListener('click', () => {
+function getChangeColor() {
   let color = getRandomHexColor();
   bodyEl.style.backgroundColor = color;
   nameColor.textContent = color;
-});
+};
+
+changeColorEl.addEventListener('click', getChangeColor);
