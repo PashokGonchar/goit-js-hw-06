@@ -12,6 +12,6 @@ textElement.classList.add('item');
 
 for (let i = 0; i < ingredients.length; i ++) {
   let li = document.createElement("li");
-  li.innerHTML = ingredients[i];
+  li.textContent = ingredients[i];
   textElement.append(li);
 }
