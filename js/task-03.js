@@ -25,3 +25,5 @@ for (let i = 0; i < images.length; i++) {
 imageElement.append(li);  
 }
 
+imageElement.style.display = 'flex';
+imageElement.style.flexDirection = 'row';
