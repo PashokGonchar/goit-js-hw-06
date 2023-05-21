@@ -7,11 +7,15 @@ const ingredients = [
   'Condiments',
 ];
 
-const textElement = document.querySelector("#ingredients");
-textElement.classList.add('item');
+const textElement = document.querySelector('#ingredients');
 
-for (let i = 0; i < ingredients.length; i ++) {
-  let li = document.createElement("li");
-  li.textContent = ingredients[i];
-  textElement.append(li);
-}
+let list = '';
+
+ingredients.forEach((el) => {
+  let li = document.createElement('li');
+  li.textContent = el;
+  li.classList.add('item');
+  list += li.outerHTML;
+});
+
+textElement.insertAdjacentHTML('afterbegin', list);

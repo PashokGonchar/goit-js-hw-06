@@ -14,16 +14,13 @@ const images = [
 ];
 const imageElement = document.querySelector('.gallery');
 
-for (let i = 0; i < images.length; i++) {
-  let li = document.createElement('li');
- 
-  li.insertAdjacentHTML(
-    'afterbegin',
-    `<img src = "${images[i].url}" "${images[i].alt}"></img>`
-  );
+let list = ''
 
-imageElement.append(li);  
-}
+images.forEach((el) => {
+  list += `<li><img src = "${el.url}" "${el.alt}"/></li>`;
+})
+
+imageElement.insertAdjacentHTML('afterbegin', list);
 
 imageElement.style.display = 'flex';
 imageElement.style.flexDirection = 'row';
