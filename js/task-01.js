@@ -15,7 +15,6 @@ const quantityItemList = `Number of Categories : ${lengthCategoriesEl}`;
 console.log(quantityItemList);
 
 const itemElArray = Array.prototype.slice.call(itemEl)
-console.log(itemElArray)
 itemElArray.forEach((cat) => {
   console.log('Category:', cat.firstElementChild.textContent);
   console.log('Elements:', cat.lastElementChild.childElementCount);
